@@ -5,21 +5,28 @@ import java.util.List;
 
 public class Mamifero extends Animal {
     private static List<Mamifero> listado = new ArrayList<>();
-    private static int caballos = 0;
-    private static int leones = 0;
+    public static int caballos = 0;
+    public static int leones = 0;
 
     private Boolean pelaje;
     private Integer patas;
 
     public Mamifero(String nombre, int edad, String habitat, String genero, Boolean pelaje, Integer patas) {
-        super(nombre, edad, habitat, genero, null); 
+        super(nombre, edad, habitat, genero); 
         listado.add(this);
         this.pelaje = pelaje;
         this.patas = patas;
     }
+    public Mamifero() {
+        super();
+        listado.add(this);
+        this.pelaje = false;
+        this.patas = 0;
+    }
+
 
     public static List<Mamifero> getListado() {
-        return listado;
+        return Mamifero.listado;
     }
 
     public static void setListado(List<Mamifero> listado) {
@@ -27,7 +34,7 @@ public class Mamifero extends Animal {
     }
 
     public Boolean isPelaje() {
-        return pelaje;
+        return this.pelaje;
     }
 
     public void setPelaje(Boolean pelaje) {
@@ -35,7 +42,7 @@ public class Mamifero extends Animal {
     }
 
     public Integer getPatas() {
-        return patas;
+        return this.patas;
     }
 
     public void setPatas(Integer patas) {

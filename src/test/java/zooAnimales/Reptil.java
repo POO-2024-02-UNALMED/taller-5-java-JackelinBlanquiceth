@@ -4,19 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Reptil extends Animal {
-    private static int iguanas = 0;
-    private static int serpientes = 0;
+	public static int iguanas = 0;
+	public static int serpientes = 0;
     private static List<Reptil> listado = new ArrayList<>();
 
     private String colorEscamas;
     private int largoCola;
 
     public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
-        super(nombre, edad, habitat, genero, null); 
+        super(nombre, edad, habitat, genero); 
         listado.add(this);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
     }
+    public Reptil() {
+        super();
+        listado.add(this);
+        this.colorEscamas = "";
+        this.largoCola = 0;
+    }
+
 
     public static int cantidadReptiles() {
         return listado.size();
@@ -37,7 +44,7 @@ public class Reptil extends Animal {
     }
 
     public static List<Reptil> getListado() {
-        return listado;
+        return Reptil.listado;
     }
 
     public static void setListado(List<Reptil> reptiles) {
@@ -45,7 +52,7 @@ public class Reptil extends Animal {
     }
 
     public String getColorEscamas() {
-        return colorEscamas;
+        return this.colorEscamas;
     }
 
     public void setColorEscamas(String color) {
@@ -53,7 +60,7 @@ public class Reptil extends Animal {
     }
 
     public int getLargoCola() {
-        return largoCola;
+        return this.largoCola;
     }
 
     public void setLargoCola(int largo) {

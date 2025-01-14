@@ -12,6 +12,12 @@ public class Animal {
         this.habitat = habitat;
         this.genero = genero;
     }
+    public Animal() {
+        this.nombre = "";
+        this.edad = 0;
+        this.habitat = "";
+        this.genero = "";
+    }
 
     public String movimiento() {
     	return "desplazarse";
@@ -34,25 +40,25 @@ public class Animal {
 
   
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
     public void setEdad(int edad) {
         this.edad = edad;
     }
     public String getHabitat() {
-        return habitat;
+        return this.habitat;
     }
     public void setHabitat(String habitat) {
         this.habitat = habitat;
     }
     public String getGenero() {
-        return genero;
+        return this.genero;
     }
     public void setGenero(String genero) {
         this.genero = genero;

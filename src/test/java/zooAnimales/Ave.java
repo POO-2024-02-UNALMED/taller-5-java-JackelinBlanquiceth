@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Ave extends Animal {
     private static List<Ave> listado = new ArrayList<>();
-    private static int halcones = 0;
-    private static int aguilas = 0;
+    public static int halcones = 0;
+    public static int aguilas = 0;
 
     private String colorPlumas;
 
@@ -15,9 +15,15 @@ public class Ave extends Animal {
         listado.add(this);
         this.colorPlumas = colorPlumas;
     }
+    public Ave() {
+        super();
+        listado.add(this);
+        this.colorPlumas = "";
+    }
+
 
     public static List<Ave> getListado() {
-        return listado;
+        return Ave.listado;
     }
 
     public static void setListado(List<Ave> listado) {
@@ -25,7 +31,7 @@ public class Ave extends Animal {
     }
 
     public String getColorPlumas() {
-        return colorPlumas;
+        return this.colorPlumas;
     }
 
     public void setColorPlumas(String color) {
@@ -38,12 +44,12 @@ public class Ave extends Animal {
 
     public static Ave crearHalcon(String nombre, int edad, String genero) {
         halcones++;
-        return new Ave(nombre, edad, "montañas", genero, "café glorioso");
+        return new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
     }
 
     public static Ave crearAguila(String nombre, int edad, String genero) {
         aguilas++;
-        return new Ave(nombre, edad, "montañas", genero, "blanco y amarillo");
+        return new Ave(nombre, edad, "montanas", genero, "blanco y amarillo");
     }
 
     public String movimiento() {

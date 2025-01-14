@@ -5,21 +5,27 @@ import java.util.List;
 
 public class Anfibio extends Animal {
     private static List<Anfibio> listado = new ArrayList<>();
-    private static int ranas = 0;
-    private static int salamandras = 0;
+    public static int ranas = 0;
+    public static int salamandras = 0;
 
     private String colorPiel;
     private boolean venenoso;
 
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
-        super(nombre, edad, habitat, genero, null); 
+        super(nombre, edad, habitat, genero); 
         listado.add(this);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
     }
+    public Anfibio() {
+        super();
+        listado.add(this);
+        this.colorPiel = "";
+        this.venenoso = false;
+    }
 
     public static List<Anfibio> getListado() {
-        return listado;
+        return Anfibio.listado;
     }
 
     public static void setListado(List<Anfibio> listado) {
@@ -27,7 +33,7 @@ public class Anfibio extends Animal {
     }
 
     public String getColorPiel() {
-        return colorPiel;
+        return this.colorPiel;
     }
 
     public void setColorPiel(String color) {
@@ -35,7 +41,7 @@ public class Anfibio extends Animal {
     }
 
     public boolean isVenenoso() {
-        return venenoso;
+        return this.venenoso;
     }
 
     public void setVenenoso(boolean venenoso) {
