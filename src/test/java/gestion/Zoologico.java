@@ -14,8 +14,8 @@ public class Zoologico {
         this.zonas = new ArrayList<>();
     }
     public Zoologico() {
-        this.nombre = "";
-        this.ubicacion = "";
+        this.nombre = null;
+        this.ubicacion = null;
         this.zonas = new ArrayList<>();
     }
 

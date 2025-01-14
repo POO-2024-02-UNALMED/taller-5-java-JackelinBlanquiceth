@@ -13,10 +13,10 @@ public class Animal {
         this.genero = genero;
     }
     public Animal() {
-        this.nombre = "";
+        this.nombre = null;
         this.edad = 0;
-        this.habitat = "";
-        this.genero = "";
+        this.habitat = null;
+        this.genero = null;
     }
 
     public String movimiento() {

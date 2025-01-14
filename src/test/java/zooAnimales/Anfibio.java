@@ -20,7 +20,7 @@ public class Anfibio extends Animal {
     public Anfibio() {
         super();
         listado.add(this);
-        this.colorPiel = "";
+        this.colorPiel = null;
         this.venenoso = false;
     }
 
